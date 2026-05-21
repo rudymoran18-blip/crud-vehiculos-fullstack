@@ -1,0 +1,139 @@
+<div class="form-container">
+
+  <div class="mb-3">
+    <a routerLink="/vehiculos" class="btn-back text-decoration-none text-muted small">
+      <i class="fa-solid fa-arrow-left me-1"></i> Volver al inventario
+    </a>
+  </div>
+
+  <header class="mb-4">
+    <h1 class="h3 fw-bold text-dark-custom mb-1">
+      {{ esNuevo ? 'Registrar Nuevo Vehículo' : 'Editar Detalles del Vehículo' }}
+    </h1>
+    <p class="text-muted small mb-0">
+      {{ esNuevo ? 'Completa los campos para dar de alta una nueva unidad.' : 'Modifica la información de la unidad seleccionada.' }}
+    </p>
+  </header>
+
+  <div class="card card-form shadow-sm border-0">
+    <div class="card-body p-4">
+
+      <form #vehiculoForm="ngForm" (ngSubmit)="onSubmit(vehiculoForm)">
+
+        <div class="row g-3">
+
+          <div class="col-12 col-md-6">
+            <label for="placa" class="form-label fw-semibold text-muted-custom">Placa</label>
+            <input
+              type="text"
+              id="placa"
+              name="placa"
+              class="form-control custom-input"
+              placeholder="P-123ABC"
+              required
+              #placaModel="ngModel"
+              [(ngModel)]="vehiculo.placa"
+              [ngClass]="{'is-invalid': placaModel.invalid && (placaModel.dirty || placaModel.touched)}"
+            >
+            <div class="invalid-feedback">La placa es obligatoria.</div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="anio" class="form-label fw-semibold text-muted-custom">Año</label>
+            <input
+              type="number"
+              id="anio"
+              name="anio"
+              class="form-control custom-input"
+              placeholder="Ej. 2026"
+              required
+              min="1900"
+              max="2027"
+              #anioModel="ngModel"
+              [(ngModel)]="vehiculo.anio"
+              [ngClass]="{'is-invalid': anioModel.invalid && (anioModel.dirty || anioModel.touched)}"
+            >
+            <div class="invalid-feedback">Ingresa un año válido.</div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="marca" class="form-label fw-semibold text-muted-custom">Marca</label>
+            <input
+              type="text"
+              id="marca"
+              name="marca"
+              class="form-control custom-input"
+              placeholder="Ej. Toyota"
+              required
+              #marcaModel="ngModel"
+              [(ngModel)]="vehiculo.marca"
+              [ngClass]="{'is-invalid': marcaModel.invalid && (marcaModel.dirty || marcaModel.touched)}"
+            >
+            <div class="invalid-feedback">La marca es obligatoria.</div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="modelo" class="form-label fw-semibold text-muted-custom">Modelo</label>
+            <input
+              type="text"
+              id="modelo"
+              name="modelo"
+              class="form-control custom-input"
+              placeholder="Ej. Corolla"
+              required
+              #modeloModel="ngModel"
+              [(ngModel)]="vehiculo.modelo"
+              [ngClass]="{'is-invalid': modeloModel.invalid && (modeloModel.dirty || modeloModel.touched)}"
+            >
+            <div class="invalid-feedback">El modelo es obligatorio.</div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="color" class="form-label fw-semibold text-muted-custom">Color</label>
+            <input
+              type="text"
+              id="color"
+              name="color"
+              class="form-control custom-input"
+              placeholder="Ej. Rojo"
+              required
+              #colorModel="ngModel"
+              [(ngModel)]="vehiculo.color"
+              [ngClass]="{'is-invalid': colorModel.invalid && (colorModel.dirty || colorModel.touched)}"
+            >
+            <div class="invalid-feedback">El color es obligatorio.</div>
+          </div>
+
+          <div class="col-12 col-md-6 d-flex align-items-center">
+            <div class="form-check form-switch custom-switch mt-md-4">
+              <input
+                type="checkbox"
+                id="reparado"
+                name="reparado"
+                class="form-check-input input-switch"
+                role="switch"
+                [(ngModel)]="vehiculo.reparado"
+              >
+              <label class="form-check-label fw-semibold ms-2" for="reparado">
+                {{ vehiculo.reparado ? 'Vehículo Reparado (Listo)' : 'En proceso de reparación (Taller)' }}
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
+          <button type="button" routerLink="/vehiculos" class="btn btn-light btn-custom-action text-muted">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary btn-custom-action" [disabled]="vehiculoForm.invalid">
+            <i class="fa-solid fa-floppy-disk me-2"></i>
+            {{ esNuevo ? 'Guardar Vehículo' : 'Actualizar Cambios' }}
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

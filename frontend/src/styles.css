@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+/* Asegura que toda la pantalla use el 100% de la altura disponible */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa el alto total de la ventana */
+  background-color: #f8f9fa; /* Un fondo gris sutil (muy UX actual) */
+}
+
+/* Este es el truco maestro de UX */
+.main-content {
+  flex: 1; /* Absorbe todo el espacio disponible, empujando el footer al fondo */
+  width: 100%;
+  max-width: 1400px; /* Evita que en pantallas ultra-anchas el diseño se estire feo */
+  margin: 0 auto; /* Centra el contenido en pantallas grandes */
+  padding: 2rem 1.5rem; /* Margen interno para que el contenido no choque con los bordes */
+  box-sizing: border-box;
+}
+
+/* Regla de UX para móviles: reduce el padding en pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 1rem;
+  }
+}

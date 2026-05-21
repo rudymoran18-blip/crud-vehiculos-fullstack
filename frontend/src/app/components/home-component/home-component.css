@@ -1,0 +1,72 @@
+/* Títulos y fuentes oscuras modernas */
+.text-dark-custom {
+  color: #1e293b;
+}
+
+/* Efecto Hero suave de Bienvenida */
+.welcome-hero {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Estilos de las tarjetas KPI con transiciones fluidas */
+.card-kpi {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px !important;
+  background-color: #ffffff;
+}
+
+/* Al pasar el mouse, la tarjeta se eleva sutilmente (UX feedback) */
+.card-kpi:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Contenedores circulares para los íconos */
+.icon-shape {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.35rem;
+}
+
+/* Fondos sutiles semi-transparentes (Tendencia actual de UI) */
+.bg-primary-soft {
+  background-color: #eff6ff;
+}
+.bg-success-soft {
+  background-color: #f0fdf4;
+}
+.bg-info-soft {
+  background-color: #f0fdfa;
+}
+
+/* Enlaces limpios con flecha */
+.btn-link-custom {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.btn-link-custom i {
+  transition: transform 0.2s ease;
+}
+.card-kpi:hover .btn-link-custom i {
+  transform: translateX(4px); /* La flechita se mueve al hacer hover */
+}
+
+/* Punto verde indicador de estado activo */
+.bg-success-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+}
+
+/* Sección inferior informativa */
+.info-section {
+  background-color: #ffffff;
+  border-color: #e2e8f0 !important;
+}

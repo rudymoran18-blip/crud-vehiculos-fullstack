@@ -1,0 +1,78 @@
+/* Navbar estilizada y fija al fondo sutil de la app */
+.custom-navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #eef2f5;
+  padding: 0.75rem 0;
+}
+
+/* Alineación limpia alineada con el contenedor maestro de la app */
+.container-max {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Estilo del Logo */
+.brand-premium {
+  font-weight: 700;
+  color: #1e293b !important;
+  letter-spacing: -0.5px;
+}
+
+/* Enlaces de navegación con transiciones suaves */
+.navbar-nav .nav-link {
+  color: #64748b !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover de los enlaces */
+.navbar-nav .nav-link:hover {
+  color: #0f172a !important;
+  background-color: #f1f5f9;
+}
+
+/* Estado Activo (Donde está parado el usuario) - UX Clave */
+.navbar-nav .nav-link.active-link {
+  color: #3b82f6 !important; /* Azul moderno */
+  background-color: #eff6ff;
+  font-weight: 600;
+}
+
+/* Botón "Agregar Vehículo" transformado en un Call To Action (CTA) */
+.btn-add-custom {
+  background-color: #2563eb !important;
+  border: none !important;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn-add-custom:hover {
+  background-color: #1d4ed8 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.25);
+}
+
+/* Si el usuario ya está en la pantalla de agregar, ocultamos o cambiamos el estado del botón */
+.btn-add-custom.active-btn {
+  background-color: #1e40af !important;
+}
+
+/* Ajustes para que en móviles no se vea todo amontonado */
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 1rem;
+  }
+  .navbar-action {
+    padding-top: 0.75rem;
+    width: 100%;
+  }
+  .btn-add-custom {
+    width: 100%; /* Botón ancho completo en celulares para que sea fácil de presionar con el pulgar */
+    text-align: center;
+  }
+}

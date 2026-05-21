@@ -1,0 +1,65 @@
+<div class="home-wrapper">
+
+  <header class="welcome-hero mb-4">
+    <div class="hero-content">
+      <span class="badge bg-primary-soft text-primary mb-2">Panel de Control</span>
+      <h1 class="display-6 fw-bold text-dark-custom">Bienvenido a Cars/GM</h1>
+      <p class="text-muted mb-0">Gestiona el inventario de tus vehículos de forma eficiente y ordenada.</p>
+    </div>
+  </header>
+
+  <div class="row g-4 mb-5">
+
+    <div class="col-12 col-md-6 col-lg-4">
+  <div class="card card-kpi h-100 shadow-sm border-0">
+    <div class="card-body d-flex align-items-center">
+
+      <div class="icon-shape bg-primary-soft text-primary me-3">
+        <i class="fa-solid fa-car"></i>
+      </div>
+
+      <div>
+        <h6 class="card-subtitle text-muted mb-1">Inventario Total</h6>
+        <h4 class="card-title fw-bold text-dark-custom mb-1">Ver Vehículos</h4>
+        <a routerLink="/vehiculos" class="stretched-link text-decoration-none btn-link-custom">
+          Explorar lista <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card card-kpi h-100 shadow-sm border-0">
+        <div class="card-body d-flex align-items-center">
+          <div class="icon-shape bg-primary-soft text-primary me-3">
+            <i class="fa-regular fa-registered"></i>
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted mb-1">Acceso Rápido</h6>
+            <h4 class="card-title fw-bold text-dark-custom mb-1">Registrar Auto</h4>
+            <a routerLink="/form/0" class="stretched-link text-decoration-none btn-link-custom text-success">
+              Añadir nuevo <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="info-section p-4 rounded-3 border">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h5 class="fw-bold text-dark-custom"><i class="bi bi-lightbulb me-2 text-warning"></i>¿Qué puedes hacer hoy?</h5>
+        <p class="text-muted mb-0 small">
+          Puedes listar todos tus vehículos en tiempo real, editarlos mediante su ID, dar de alta nuevos modelos con sus especificaciones, o realizar bajas lógicas de manera segura sin perder el historial.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <button routerLink="/vehiculos" class="btn btn-outline-dark btn-sm">Ir al Inventario</button>
+      </div>
+    </div>
+  </section>
+
+</div>

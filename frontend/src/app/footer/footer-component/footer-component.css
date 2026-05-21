@@ -1,0 +1,58 @@
+/* Contenedor del Footer */
+.custom-footer {
+  background-color: #1e293b; /* Un tono gris/azul oscuro muy elegante */
+  color: #94a3b8; /* Texto claro pero suave para no cansar la vista */
+  padding: 1.5rem 0;
+  margin-top: auto; /* Refuerza el empuje hacia abajo en Flexbox */
+  border-top: 1px solid #334155;
+  font-size: 0.9rem;
+}
+
+/* Alineación con el resto de la app (Navbar y Main) */
+.container-max {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Estilo del nombre de la marca en el footer */
+.footer-brand {
+  color: #f8fafc;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Texto de copyright */
+.footer-copyright {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Enlaces del Footer */
+.footer-links .footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links .footer-link:hover {
+  color: #3b82f6; /* Cambia al azul del sistema al pasar el mouse */
+}
+
+/* Icono diminuto para el estado del sistema */
+.micro-icon {
+  font-size: 0.6rem;
+  vertical-align: middle;
+}
+
+/* Ajustes responsivos para celulares */
+@media (max-width: 767px) {
+  .custom-footer {
+    padding: 2rem 0;
+  }
+  .footer-links {
+    margin-top: 0.5rem;
+  }
+}
