@@ -77,6 +77,15 @@ Los registros eliminados no aparecen en las consultas normales, pero siguen exis
 </p>
 
 ---
+---
+
+### No hay  vehículos
+
+<p align="center">
+  <img src="./assets/no-hay-vehiculos.png" width="900">
+</p>
+
+---
 
 ## Estructura del proyecto
 
