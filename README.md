@@ -93,7 +93,7 @@ database/
 ### 1. Clonar repositorio
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/rudymoran18-blip/crud-vehiculos-fullstack.git
 cd crud-vehiculos-fullstack
 ```
 
